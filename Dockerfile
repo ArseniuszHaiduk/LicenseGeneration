@@ -12,6 +12,6 @@ FROM mcr.microsoft.com/dotnet/runtime:8.0
 
 WORKDIR /source
 
-COPY --from=build ./app/out .
+COPY --from=build /app/out .
 
 ENTRYPOINT ["dotnet", "LicenseGeneration.dll"]
